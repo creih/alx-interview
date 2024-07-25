@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Pascal's Triangle"""
+"""file ya Pascal's Triangle"""
 
 
 def pascal_triangle(n):
-    """method returns a list of lists of integers Pascal’s triangle of n"""
+    """method itanga list of lists of integers Pascal’s triangle of n"""
     if n <= 0:
         return []
     triangle = []
