@@ -21,7 +21,7 @@ mandatory
 Write a script that reads stdin line by line and
 computes metrics:
 
-    Input format:
+    Input format (based on the input above):
     <IP Address> - [<date>] "GET /projects/260 HTTP/1.1"
     <status code> <file size> (if the format is not this one,
     the line must be skipped)
