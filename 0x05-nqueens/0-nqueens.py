@@ -37,7 +37,7 @@ def solve_nqueens(board, col, N):
 
 
 def nqueens(N):
-    """main method to resolve the issue by combining all upper methods"""
+    """main method iresolvinga the issue by combining all upper methods"""
     board = [[0 for _ in range(N)] for _ in range(N)]
     solve_nqueens(board, 0, N)
 
