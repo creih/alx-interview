@@ -13,14 +13,23 @@ req(url, (error, response, body) => {
   const film = JSON.parse(body);
   const characters = film.characters;
 
-  characters.forEach(char => {
-    req(char, (error, response, body) => {
-      if (error) {
-        console.error(error);
-        return;
-      }
-      const character = JSON.parse(body);
-      console.log(character.name);
+  // Function to fetch and print character name
+  const fetchCharacterName = (characterUrl) => {
+    return new Promise((resolve, reject) => {
+      req(characterUrl, (error, response, body) => {
+        if (error) {
+          reject(error);
+        } else {
+          const characterData = JSON.parse(body);
+          console.log(characterData.name);
+          resolve();
+        }
+      });
     });
-  });
+  };
+
+  // Process all characters sequentially
+  characters.reduce((promise, characterUrl) => {
+    return promise.then(() => fetchCharacterName(characterUrl));
+  }, Promise.resolve());
 });
