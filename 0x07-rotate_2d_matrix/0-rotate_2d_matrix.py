@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-ku rotate 2D Matrix
+ku rotate 2D Matrix using reverse()
 """
 
 def rotate_2d_matrix(matrix):
