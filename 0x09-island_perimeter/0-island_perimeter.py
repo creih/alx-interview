@@ -27,3 +27,11 @@ def island_perimeter(grid):
                     perimeter -= 2
 
     return perimeter
+
+"""
+.tech 
+
+paswd
+
+G9!fL2+qK.4
+"""
