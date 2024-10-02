@@ -31,7 +31,5 @@ def island_perimeter(grid):
 """
 .tech 
 
-paswd
-
-G9!fL2+qK.4
+paswd: G9!fL2+qK.4
 """
