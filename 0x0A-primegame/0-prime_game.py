@@ -8,6 +8,7 @@ def isWinner(x, nums):
     """ ishaka winner of primus guessing game """
     if x <= 0 or any(n < 1 for n in nums):
         return None
+
     def sieve_of_eratosthenes(n):
         sieve = [True] * (n + 1)
         sieve[0] = sieve[1] = False
@@ -18,6 +19,7 @@ def isWinner(x, nums):
         return sieve
     max_num = max(nums)
     primes = sieve_of_eratosthenes(max_num)
+
     maria_wins = 0
     ben_wins = 0
     for n in nums:
