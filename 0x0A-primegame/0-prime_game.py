@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 """
-This module defines and implements a prime number guessing algorithm for determining the winner.
+This module defines and implements a prime number guessing algorithm
+for determining the winner.
 """
 
+
 def isWinner(x, nums):
-    """ Determines the winner of the prime number guessing game between Maria and Ben """
+    """
+    shaka the winner of the prime number guessing game between Maria and Ben
+    """
     if x <= 0 or any(n < 1 for n in nums):
         return None
+
     def sieve_of_eratosthenes(n):
         """ Returns a list of prime numbers up to n """
         sieve = [True] * (n + 1)
