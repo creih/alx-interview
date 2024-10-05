@@ -7,7 +7,6 @@ this module defines and implements a prime number guesing algorithm for winner
 def isWinner(x, nums):
     """ ishaka winner of primus guessing game """
     def sieve_of_eratosthenes(n):
-        """ finding sieve of eratosthenes """
         sieve = [True] * (n + 1)
         sieve[0] = sieve[1] = False
         for i in range(2, int(n**0.5) + 1):
@@ -25,7 +24,7 @@ def isWinner(x, nums):
             maria_wins += 1
         else:
             ben_wins += 1
-    if x == 0 or x < 0:
+    if x <= 0 or nums <= 0:
         return None
     if maria_wins > ben_wins:
         return "Maria"
