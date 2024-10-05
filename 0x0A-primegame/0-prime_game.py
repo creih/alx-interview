@@ -10,6 +10,7 @@ def isWinner(x, nums):
         return None
 
     def sieve_of_eratosthenes(n):
+        """calculating winner based on sieve formula"""
         sieve = [True] * (n + 1)
         sieve[0] = sieve[1] = False
         for i in range(2, int(n**0.5) + 1):
